@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/login.css">
+        <script type="text/javascript" src="jquery.js"></script>
+
+        <title>IRC CHAT</title>
+    </head>
+    <body>
+        <nav>
+            <span>Chat qualcosa</span>
+        </nav>
+        <div class="container">
+
+            <form class="login" action="phpFiles/logIn.php" method="post">
+                <div class="input-container">
+                    <input type="text" class="input-form" name="user" placeholder=" " required>
+                    <label class="input-name champagne">Username</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" class="input-form" name="password" placeholder=" " required>
+                    <label class="input-name champagne">Password</label>
+                </div>
+
+                <button type="submit" name='confirm' value='Login' class="submit">Accedi</button>
+                <a href="phpFiles/signUp.php" class="link champagne">Registrati ora</a>
+                <!-- <a href="phpFiles/CreateTopic.php" class="link champagne">Crea un topic</a> -->
+            </form>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</html>

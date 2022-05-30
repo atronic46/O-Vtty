@@ -1,0 +1,130 @@
+:root{
+    --dark-purple: #160f29;
+    --ming: #246a73;
+    --dark-cyan: #368f8b;
+    --champagne: #f3dfc1;
+}
+/* CHAT */
+.chat{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    flex-direction: column;
+    align-items: center;
+    transition:all 1s;
+    padding: 50px;
+}
+.screen{
+    width: 500px;
+    height: 700px;
+    background: var(--dark-cyan);
+    margin: 10px;
+    border-radius: 25px;
+    border: 2px solid var(--dark-purple);
+    transition:all 1s;
+    padding: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.screen::-webkit-scrollbar {
+    width: 10px;
+    position: absolute;
+}
+.screen::-webkit-scrollbar-track {
+    background: none;
+    margin: 20px;
+}
+.screen::-webkit-scrollbar-thumb {
+    background: var(--dark-purple);
+    border-radius: 10px;
+}
+.screen::-webkit-scrollbar-thumb:hover {
+    background:#261f39 ;
+}
+.write-form{
+    height: 30px;
+    width: 350px;
+    transition:all 1s;
+    display: flex;
+}
+.input{
+    height: 30px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid var(--dark-purple);
+    transition:all 1s;
+    padding: 5px;
+}
+.input:hover{
+    background: none;
+}
+.input:focus{
+    border: 2px solid var(--dark-purple); 
+}
+.send-button{
+    width: 30px;
+    background: var(--dark-cyan);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--dark-purple);
+    margin-left: 10px;
+    }
+.msg-container{
+    max-width: 60%;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin: 10px 0;
+    margin-left: 5px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 5px;
+    background: var(--dark-purple);
+    position: relative;
+}
+.msg-container::after{
+    content: "";
+    position: absolute;
+    left: -11px;
+    bottom: -2px;
+    width: 0; height: 0; line-height: 0;
+    border-bottom: 12px solid var(--dark-purple);
+    border-left:   10px solid transparent;
+    border-right:  10px solid transparent;
+}
+.name{
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--ming);
+}
+.date{
+    color: var(--champagne);
+    font-size: 12px;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    
+}
+.msg{
+    color: var(--champagne);
+    word-wrap: break-word;
+}
+/* HELPERS */
+.close{
+    opacity: 0;
+    transition:all 1s;
+    z-index: -1;
+}
+.show{
+    opacity: 1;
+    transition:all 1s;
+    z-index: 1;
+}
+
